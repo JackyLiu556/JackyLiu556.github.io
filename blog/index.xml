@@ -8,20 +8,22 @@
     <language>zh-tw</language>
     <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate><atom:link href="https://jackyliu556.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>### Markdown - 輕量級標記式語言</title>
+      <link>https://jackyliu556.github.io/blog/post-5/</link>
+      <pubDate>Mon, 21 Jun 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://jackyliu556.github.io/blog/post-5/</guid>
+      <description>Markdown是一種輕量級標記式語言，它能讓文件更容易閱讀、編寫。
+Markdown不是要來取代HTML，是一種編寫的格式，HTML 是一種發佈的格式。
+大部分情況下是用來撰寫程式語言相關的文檔，因為純文字的特性與程式碼一致，且可搭配標示符號來改變呈現格式，像是在 Github 的文件中使用 readme.md 的 Markdown 格式，則會預設作為該儲存庫的介紹。</description>
+    </item>
+    
+    <item>
       <title>### 第一篇發文測試</title>
       <link>https://jackyliu556.github.io/blog/post-4/</link>
       <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jackyliu556.github.io/blog/post-4/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX5</title>
-      <link>https://jackyliu556.github.io/blog/post-5/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>https://jackyliu556.github.io/blog/post-5/</guid>
       <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
     </item>
     

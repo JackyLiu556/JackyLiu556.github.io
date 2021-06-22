@@ -89,7 +89,7 @@
           </ul>
         </div>
 
-        <a class="navbar-brand mx-auto desktop-view" href="https://jackyliu556.github.io"><img class="img-fluid"
+        <a class="navbar-brand mx-auto desktop-view" href="https://jackyliu556.github.io"><img class="img-fluid 22"
             src="https://jackyliu556.github.io/images/logo.png" alt="Jacky&#39;s Blog"></a>
 
         <ul class="navbar-nav">
