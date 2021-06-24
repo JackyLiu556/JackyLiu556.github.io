@@ -148,7 +148,7 @@
 <li>方便撰寫工具 : Typora</li>
 <li>缺點 :表格只有簡單行列，不能合併儲存格，可用圖片代替</li>
 </ul>
-<!-- raw HTML omitted -->
+<hr>
 <h3 id="markdown語法">Markdown語法</h3>
 <p>Markdown語法</p>
 <ol>
@@ -173,17 +173,19 @@
 <span style="color:#f92672">+</span> <span style="color:#f92672">第一项</span>
 <span style="color:#f92672">+</span> <span style="color:#f92672">第二项</span>
 <span style="color:#f92672">+</span> <span style="color:#f92672">第三项</span>
-</code></pre></div><ol start="6">
-<li>超連結 :
-<a href="http://www.google.com.tw/">Google</a></li>
+</code></pre></div><hr>
+<ol start="6">
+<li>超連結 : <a href="http://www.google.com.tw/">Google</a></li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">[</span><span style="color:#f92672">Google</span><span style="color:#f92672">](</span><span style="color:#f92672">http</span><span style="color:#f92672">://</span><span style="color:#f92672">www</span>.<span style="color:#a6e22e">google</span>.<span style="color:#a6e22e">com</span>.<span style="color:#a6e22e">tw</span><span style="color:#f92672">/)</span>
-</code></pre></div><ol start="7">
+<p><code>[Google](http://www.google.com.tw/)</code></p>
+<hr>
+<ol start="7">
 <li>圖片 :
 <img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 圖標"></li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">![</span><span style="color:#f92672">RUNOOB</span> <span style="color:#f92672">圖標</span><span style="color:#f92672">](</span><span style="color:#f92672">http</span><span style="color:#f92672">://</span><span style="color:#f92672">static</span>.<span style="color:#a6e22e">runoob</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#f92672">images</span><span style="color:#f92672">/</span><span style="color:#f92672">runoob-logo</span>.<span style="color:#a6e22e">png</span><span style="color:#f92672">)</span>
-</code></pre></div><ol start="8">
+<p><code>![RUNOOB 圖標](http://static.runoob.com/images/runoob-logo.png)</code></p>
+<hr>
+<ol start="8">
 <li>
 <p>單行程式碼 &amp; 多行程式碼 : 可以用 ``` 包裹一段代码，並指定一种语言</p>
 </li>
@@ -192,6 +194,19 @@
 </li>
 </ol>
 <p><a href="https://www.runoob.com/markdown/md-tutorial.html">參考來源 : https://www.runoob.com/markdown/md-tutorial.html</a></p>
+<p><br><br><br><br><br></p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; 2021-06-25 add &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
+<p>PS : Markdown沒有支持<strong>內嵌HTML</strong>和<strong>字體顏色</strong></p>
+<ul>
+<li>要在config.yml 加上才可以內嵌HTML</li>
+</ul>
+<p><code>[markup.goldmark.renderer]</code></p>
+<p><code>unsafe = true</code></p>
+<hr>
+<ul>
+<li>再用html改變字體顏色</li>
+</ul>
+<p><code>&lt;font color=&quot;#dd0000&quot;&gt;浅红色文字：&lt;/font&gt;&lt;br /&gt;</code></p>
 
         </div>
 
