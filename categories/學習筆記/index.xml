@@ -6,13 +6,24 @@
     <description>Recent content in 學習筆記 on Jacky&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 21 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jackyliu556.github.io/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jackyliu556.github.io/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>### Google Analytics (GA) 和 Google Tag Manager (GTM)</title>
+      <link>https://jackyliu556.github.io/blog/post-3/</link>
+      <pubDate>Tue, 22 Jun 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://jackyliu556.github.io/blog/post-3/</guid>
+      <description>GA是什麼? Google提供的 Google Analytics 是所有網站最基本必裝的網站分析工具，不論你在賣什麼商品或是服務，肯定要知道Google Analytics如何分析，也必須了解它該如何操作與解讀才能協助你的業績蒸蒸日上！GA除了可以幫你估算銷售量、轉換率，方便你瞭解使用者如何使用你的網站、他們是從什麼管道搜尋或是連結前來，你的網站內容是否吸引人、符合使用者所需等，有些甚至能以圖示呈現資料，讓你一眼就清楚抓出自己想要的數據結果。
+GA Analytics (分析)
+GA安裝教學</description>
+    </item>
+    
     <item>
       <title>### Markdown - 輕量級標記式語言</title>
-      <link>https://jackyliu556.github.io/blog/post-5/</link>
-      <pubDate>Mon, 21 Jun 2021 10:07:47 +0600</pubDate>
+      <link>https://jackyliu556.github.io/blog/post-2/</link>
+      <pubDate>Tue, 22 Jun 2021 10:07:47 +0600</pubDate>
       
-      <guid>https://jackyliu556.github.io/blog/post-5/</guid>
+      <guid>https://jackyliu556.github.io/blog/post-2/</guid>
       <description>Markdown是一種輕量級標記式語言，它能讓文件更容易閱讀、編寫。
 Markdown不是要來取代HTML，是一種編寫的格式，HTML 是一種發佈的格式。
 大部分情況下是用來撰寫程式語言相關的文檔，因為純文字的特性與程式碼一致，且可搭配標示符號來改變呈現格式，像是在 Github 的文件中使用 readme.md 的 Markdown 格式，則會預設作為該儲存庫的介紹。</description>
