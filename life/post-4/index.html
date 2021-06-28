@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is meta description">
+  <meta name="description" content="Swagger 是一套 API 互動文件產生器，使用 HTML 與 Javascript 所編寫">
   <meta name="author" content="Jacky liu">
   <meta name="generator" content="Hugo 0.84.0" />
 
@@ -117,117 +117,95 @@
 </header>
 <!-- /navigation -->
 
-
-<section class="section-sm list-html">
+<section class="section-sm single-html">
   <div class="container">
     <div class="row">
-      
-      <div class="col-lg-4">
-  
-  <div class="widget">
-    
-    <h4 class="widget-title">About Me</h4>
-    
-    <img src="https://jackyliu556.github.io/images/author.jpg" alt=""
-      class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
-    
-    <p id="about-sidebar">我是劉立銓，中壢人，目前在 Mirror 擔任 Java Backend Developer，這裡是我紀錄和分享擔任碼農的學習心得。</p>
-    <a href="https://jackyliu556.github.io/about/" class="btn btn-outline-primary">Know More</a>
-    
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Category</h4>
-    <ul class="list-unstyled">
-      <li><a
-          href="/categories/java">Java</a>
-      </li>
-      <li><a
-          href="/categories/test">Test</a>
-      </li>
-      <li><a
-          href="/categories/%e5%ad%b8%e7%bf%92%e7%ad%86%e8%a8%98">學習筆記</a>
-      </li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Social</h4>
-    <ul class="list-inline social-links">
-      
-      <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100005005938684"><i class="ti-facebook"></i></a></li>
-      
-      <li class="list-inline-item"><a href="https://www.instagram.com/eddy07160/"><i class="ti-instagram"></i></a></li>
-      
-      <li class="list-inline-item"><a href="https://github.com/JackyLiu556"><i class="ti-github"></i></a></li>
-      
-      <li class="list-inline-item"><a href="https://www.linkedin.com/in/%E7%AB%8B%E9%8A%93-%E5%8A%89-942111211/"><i class="ti-linkedin"></i></a></li>
-      
-    </ul>
-  </div>
-</div>
+      <div class="col-lg-10 mx-auto">  
+        <div style="text-align: center;">
+          <h2><h3 id="spring-boot中使用swagger2建構restful-apis">Spring Boot中使用Swagger2建構RESTful APIs</h3>
+</h2>
+        </div>     
+        <div class="mb-3 post-meta" style="text-align: center;">
+          <span>By Jacky liu</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>2021-06-27</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          
+          <a href="/categories/java"
+            class="text-primary">Java</a>
+          
+        </div>
+        
+        <div class="mt-1" style="border-top: 3px solid #4169E1; height: 1rem;"></div>
+        <div class="content mb-5">
+          <h3 id="swagger是什麼">Swagger是什麼?</h3>
+<p>Swagger 是一套 API 互動文件產生器，使用 HTML 與 Javascript 所編寫的一套 Open Source Software，支援了現在許多的 REST API，之所以會說這是一個互動的文件，除了顯示 API 輸出入規格外，也能夠讓使用者即時的在 Swagger UI 介面上對你的 Web API 進行測試，立刻就能看到執行結果。</p>
+<hr>
+<h4 id="1-maven-pomxml-抓相關jar">1. Maven pom.xml 抓相關jar</h4>
+<pre><code>&lt;dependency&gt;
+  &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+  &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
+  &lt;version&gt;2.7.0&lt;/version&gt;
+&lt;/dependency&gt;
 
-      
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="col-md-12 mb-4">
-    <article class="card">
-        <div class="card-body px-0">
-        <a href="https://jackyliu556.github.io/blog/swagger/" class="h5 d-block my-3"><h3 id="spring-boot中使用swagger2建構restful-apis">Spring Boot中使用Swagger2建構RESTful APIs</h3>
-</a>
-        <div class="mb-3 post-meta">
-            <span>By Jacky liu</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>2021-06-27</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            
-            <a href="/categories/java"
-                class="text-primary">Java</a>
-            
+&lt;dependency&gt;
+  &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+  &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;
+  &lt;version&gt;2.7.0&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre><h4 id="2-配置swagger-config檔案">2. 配置Swagger config檔案</h4>
+<pre><code>@Configuration
+@EnableSwagger2
+public class SwaggerConf {
+    @Bean
+    public Docket createRestApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(apiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage(&quot;com.kevin.controller&quot;))
+                .paths(PathSelectors.any())//paths(PathSelectors.regex(&quot;/.*&quot;))
+                .build();
+    }
+
+    private ApiInfo apiInfo() {
+        return new ApiInfoBuilder()
+                .title(&quot;標題:Spring Boot中使用Swagger2建構RESTful APIs&quot;)
+                .description(&quot;相關說明&quot;)
+                .termsOfServiceUrl(&quot;https://www.pixnet.net/pcard/B0212066/&quot;)
+                .license(&quot;Apache 2.0&quot;)
+                .licenseUrl(&quot;http://www.apache.org/licenses/LICENSE-2.0.html&quot;)
+                .version(&quot;1.0.0&quot;)
+                .build();
+    }
+}
+</code></pre><h4 id="3-在controller新增api並增加api說明">3. 在controller新增API，並增加API說明</h4>
+<pre><code>
+@Api(tags=&quot;UserController&quot;,description=&quot;類別檔案說明&quot;)
+@RestController
+public class UserController {
+	  @ApiOperation(value=&quot;My first api&quot;, notes=&quot;API說明文字&quot;)
+	  @PostMapping(&quot;/api/v1&quot;)
+	  public ResponseEntity hello(@RequestBody UserRequestDto dto){
+		  System.out.println(dto);
+	      return ResponseEntity.ok(&quot;Hello World&quot;);
+	  }
+}
+</code></pre><h4 id="3-輸入網址來測試-">3. 輸入網址來測試 :</h4>
+<pre><code>http://localhost:8080/swagger-ui.html
+</code></pre><p><img src="/images/Swagger.png" alt="Swagger"></p>
+<p><a href="https://github.com/JackyLiu556/swaggerDemo">範例程式碼(GitHub)</a></p>
+<p><a href="https://b0212066.pixnet.net/blog/post/215996424-swagger-2%E4%BD%BF%E7%94%A8%E7%AD%86%E8%A8%98">參考文章</a></p>
+
         </div>
-        <p class="card-text">Swagger 是一套 API 互動文件產生器，使用 HTML 與 Javascript 所編寫</p>
-        <a href="https://jackyliu556.github.io/blog/swagger/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-          <div class="col-md-12 mb-4">
-    <article class="card">
-        <div class="card-body px-0">
-        <a href="https://jackyliu556.github.io/blog/restful/" class="h5 d-block my-3"><h3 id="restful-風格api">RESTful 風格API</h3>
-</a>
-        <div class="mb-3 post-meta">
-            <span>By Jacky liu</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>2021-06-25</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            
-            <a href="/categories/java"
-                class="text-primary">Java</a>
-            
-        </div>
-        <p class="card-text">Swagger 是一套 API 互動文件產生器，使用 HTML 與 Javascript 所編寫</p>
-        <a href="https://jackyliu556.github.io/blog/restful/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-        </div>
-      </div>
-      
-      <div class="col-12 mt-5">
+
+        
         
       </div>
     </div>
   </div>
 </section>
-
 
 
 
