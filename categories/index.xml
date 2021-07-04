@@ -6,11 +6,20 @@
     <description>Recent content in Categories on Jacky&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 29 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jackyliu556.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jackyliu556.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Boot</title>
+      <link>https://jackyliu556.github.io/categories/spring-boot/</link>
+      <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackyliu556.github.io/categories/spring-boot/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Java</title>
       <link>https://jackyliu556.github.io/categories/java/</link>
-      <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jackyliu556.github.io/categories/java/</guid>
       <description></description>

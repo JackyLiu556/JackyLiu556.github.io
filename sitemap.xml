@@ -2,22 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jackyliu556.github.io/blog/deploy/</loc>
-    <lastmod>2021-06-29T00:00:00+00:00</lastmod>
+    <loc>https://jackyliu556.github.io/blog/springdatajpa/</loc>
+    <lastmod>2021-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jackyliu556.github.io/blog/springjdbc/</loc>
+    <lastmod>2021-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jackyliu556.github.io/categories/</loc>
-    <lastmod>2021-06-29T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jackyliu556.github.io/</loc>
-    <lastmod>2021-06-29T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jackyliu556.github.io/categories/java/</loc>
+    <loc>https://jackyliu556.github.io/categories/spring-boot/</loc>
+    <lastmod>2021-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jackyliu556.github.io/blog/deploy/</loc>
     <lastmod>2021-06-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jackyliu556.github.io/blog/swagger/</loc>
     <lastmod>2021-06-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jackyliu556.github.io/blog/restful/</loc>
+    <lastmod>2021-06-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jackyliu556.github.io/categories/java/</loc>
     <lastmod>2021-06-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jackyliu556.github.io/blog/ga/</loc>

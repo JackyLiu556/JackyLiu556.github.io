@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is meta description">
+  <meta name="description" content="在Spring Boot中執行原始的SQL語法，去操作資料庫">
   <meta name="author" content="Jacky liu">
   <meta name="generator" content="Hugo 0.84.0" />
 
@@ -117,97 +117,138 @@
 </header>
 <!-- /navigation -->
 
-
-<section class="section-sm list-html">
+<section class="section-sm single-html">
   <div class="container">
     <div class="row">
-      
-      <div class="col-lg-4">
-  
-  <div class="widget">
-    
-    <h4 class="widget-title">About Me</h4>
-    
-    <img src="https://jackyliu556.github.io/images/author.jpg" alt=""
-      class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
-    
-    <p id="about-sidebar">我是劉立銓，中壢人，目前在 Mirror 擔任 Java Backend Developer，這裡是我紀錄和分享擔任碼農的學習心得。</p>
-    <a href="https://jackyliu556.github.io/about/" class="btn btn-outline-primary">Know More</a>
-    
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Category</h4>
-    <ul class="list-unstyled">
-      <li><a
-          href="/categories/java">Java</a>
-      </li>
-      <li><a
-          href="/categories/spring-boot">Spring boot</a>
-      </li>
-      <li><a
-          href="/categories/test">Test</a>
-      </li>
-      <li><a
-          href="/categories/%e5%ad%b8%e7%bf%92%e7%ad%86%e8%a8%98">學習筆記</a>
-      </li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Social</h4>
-    <ul class="list-inline social-links">
-      
-      <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100005005938684"><i class="ti-facebook"></i></a></li>
-      
-      <li class="list-inline-item"><a href="https://www.instagram.com/eddy07160/"><i class="ti-instagram"></i></a></li>
-      
-      <li class="list-inline-item"><a href="https://github.com/JackyLiu556"><i class="ti-github"></i></a></li>
-      
-      <li class="list-inline-item"><a href="https://www.linkedin.com/in/%E7%AB%8B%E9%8A%93-%E5%8A%89-942111211/"><i class="ti-linkedin"></i></a></li>
-      
-    </ul>
-  </div>
-</div>
+      <div class="col-lg-10 mx-auto">  
+        <div style="text-align: center;">
+          <h2><h3 id="spring-jdbc建立cotroller-service-dao">Spring JDBC，建立Cotroller-Service-Dao</h3>
+</h2>
+        </div>     
+        <div class="mb-3 post-meta" style="text-align: center;">
+          <span>By Jacky liu</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>2021-07-04</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          
+          <a href="/categories/spring-boot"
+            class="text-primary">Spring boot</a>
+          
+        </div>
+        
+        <div class="mt-1" style="border-top: 3px solid #4169E1; height: 1rem;"></div>
+        <div class="content mb-5">
+          <h4 id="spring-jdbc">Spring JDBC</h4>
+<p>在Spring Boot中執行<font color="#dd0000">原始的SQL語法</font>，去操作資料庫</p>
+<hr>
+<h4 id="1-資料庫連線參考影片httpshahowincourses5fe22e7fe810e10fc483dd78discussionsitem606cfeac46100aecd52e512aunit5fe70cb6e810e14a4a892a82">1. 資料庫連線(<a href="https://hahow.in/courses/5fe22e7fe810e10fc483dd78/discussions?item=606cfeac46100aecd52e512a&amp;unit=5fe70cb6e810e14a4a892a82">參考影片</a>)</h4>
+<p>官網並安裝MySQL DB</p>
+<p><a href="https://downloads.mysql.com/archives/installer/">下載</a></p>
+<h4 id="2-資料庫連線設定參考影片httpshahowincourses5fe22e7fe810e10fc483dd78discussionsitem5ffee057c1a81d0c15f6b322unit5fe70cb6e810e14a4a892a82">2. 資料庫連線設定(<a href="https://hahow.in/courses/5fe22e7fe810e10fc483dd78/discussions?item=5ffee057c1a81d0c15f6b322&amp;unit=5fe70cb6e810e14a4a892a82">參考影片</a>)</h4>
+<pre><code>設定application.properties
+</code></pre>
+<pre><code>spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Taipei&amp;character-set=utf8
+spring.datasource.username=root
+spring.datasource.password=springboot
+</code></pre><pre><code>設定pom.yml
+</code></pre>
+<pre><code>	&lt;dependency&gt;
+		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+		&lt;artifactId&gt;spring-boot-starter-jdbc&lt;/artifactId&gt;
+	&lt;/dependency&gt;
+</code></pre><h4 id="3-建立class對應到資料庫">3. 建立Class對應到資料庫</h4>
+<pre><code>@Entity
+@Table(name = &quot;student&quot;)
+public class Student {
 
-      
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="col-md-12 mb-4">
-    <article class="card">
-        <div class="card-body px-0">
-        <a href="https://jackyliu556.github.io/blog/restful/" class="h5 d-block my-3"><h3 id="restful-風格api">RESTful 風格API</h3>
-</a>
-        <div class="mb-3 post-meta">
-            <span>By Jacky liu</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>2021-06-25</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            
-            <a href="/categories/java"
-                class="text-primary">Java</a>
-            
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = &quot;id&quot;)
+	Integer id;
+	
+	@Column(name = &quot;name&quot;)
+	String name;
+
+		public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+}
+</code></pre><h4 id="4-建立controller-service-dao">4. 建立Controller-service-dao</h4>
+<p><img src="/images/springJDBC.png" alt="JDBC"></p>
+<ul>
+<li>Controller</li>
+</ul>
+<pre><code>	@GetMapping(&quot;/jdbc/students/{studendId}&quot;)
+	public Student select(@PathVariable Integer studendId) {
+		
+		System.out.println(&quot;jdbc 執行查詢 並實現 MVC&quot;);
+		return studentService.getById(studendId);
+	}
+</code></pre><ul>
+<li>Service</li>
+</ul>
+<pre><code>@Component
+public class StudentServiceImpl implements StudentService{
+
+	@Autowired
+	private StudentDao studentDao;
+
+	@Override
+	public Student getById(Integer studentId) {
+		return studentDao.getById(studentId);
+	}
+	
+}
+
+</code></pre><ul>
+<li>Dao</li>
+</ul>
+<pre><code>@Component
+public class StudentDao {
+	@Autowired
+	private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+	
+	public Student getById(Integer studentId) {
+		
+		String sql =&quot;select id ,name from student where id = :studentId&quot;;
+		Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();
+		map.put(&quot;studentId&quot;, studentId);
+		
+		List&lt;Student&gt; list = namedParameterJdbcTemplate.query(sql, map,new StudentRowMapper());
+		
+		if(list.size()&gt;0) {
+			return list.get(0);
+		}else {
+			return null;	
+		}
+	}
+}
+
+</code></pre><p><a href="https://github.com/JackyLiu556/conectionDbDemo">範例程式碼(GitHub)</a></p>
+
         </div>
-        <p class="card-text">Swagger 是一套 API 互動文件產生器，使用 HTML 與 Javascript 所編寫</p>
-        <a href="https://jackyliu556.github.io/blog/restful/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-        </div>
-      </div>
-      
-      <div class="col-12 mt-5">
+
+        
         
       </div>
     </div>
   </div>
 </section>
-
 
 
 
