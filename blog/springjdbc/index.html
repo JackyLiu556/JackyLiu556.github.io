@@ -159,20 +159,14 @@ spring.datasource.password=springboot
 		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-boot-starter-jdbc&lt;/artifactId&gt;
 	&lt;/dependency&gt;
-</code></pre><h4 id="3-建立class對應到資料庫">3. 建立Class對應到資料庫</h4>
-<pre><code>@Entity
-@Table(name = &quot;student&quot;)
+</code></pre><h4 id="3-建立class">3. 建立Class</h4>
+<pre><code>
 public class Student {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = &quot;id&quot;)
 	Integer id;
-	
-	@Column(name = &quot;name&quot;)
 	String name;
 
-		public Integer getId() {
+	public Integer getId() {
 		return id;
 	}
 
