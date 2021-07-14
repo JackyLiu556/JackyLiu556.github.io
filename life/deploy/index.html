@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="this is meta description">
+  <meta name="description" content="佈署war檔">
   <meta name="author" content="Jacky liu">
   <meta name="generator" content="Hugo 0.84.0" />
 
@@ -117,144 +117,134 @@
 </header>
 <!-- /navigation -->
 
-<section class="section-sm list-html">
+<section class="section-sm single-html">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
+      <div class="col-lg-10 mx-auto">  
+        <div style="text-align: center;">
+          <h2><h3 id="lifelifelifelifelifelifelifelifelifelifelifelifelifelifelifelifelifelifelifelifelifelifelifelifelifelife">LifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLife</h3>
+</h2>
+        </div>     
+        <div class="mb-3 post-meta" style="text-align: center;">
+          <span>By Jacky liu</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>2021-06-20</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          
+        </div>
         
-        <img src="https://jackyliu556.github.io/images/author.jpg" alt="" style="max-width: 400px;
-        max-height: 400px;" class="img-fluid d-block mx-auto rounded-circle mb-4">
+        <img src="https://jackyliu556.github.io/images/featured-post/post-1.jpg" class="img-fluid w-100 mb-4" alt="LifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLifeLife
+">
         
-        <h4 class="widget-title">About Me</h4>
-        <div class="content">
-          <p>我是劉立銓，中壢人，目前在 Mirror 擔任 Java Backend Developer，這裡是我紀錄和分享擔任碼農的學習心得。</p>
+        <div class="mt-1" style="border-top: 3px solid #4169E1; height: 1rem;"></div>
+        <div class="content mb-5">
+          <h3 id="版本">版本</h3>
+<p>apache-tomcat-8.5.68 [<a href="https://tomcat.apache.org/download-80.cgi">下載</a>]</p>
+<p>openjdk version 11.0.11 (cmd 鍵入java -version 查詢版本)</p>
+<hr>
+<h4 id="1-快速創建spring-boot-專案">1. 快速創建Spring Boot 專案</h4>
+<p><img src="/images/CreateSpringBoot.png" alt="CreateSpringBoot"></p>
+<h4 id="2-新增入口">2. 新增入口</h4>
+<pre><code>@RestController
+public class MyController {
+	
+	@RequestMapping(&quot;/index&quot;)
+	public String index() {
+		return &quot;Hello,word&quot;;
+	}
+}
+
+</code></pre><h4 id="3-pomxml-設定">3. pom.xml 設定</h4>
+<ul>
+<li>
+<p>增加 &lt;packaging&gt;war&lt;/packaging&gt;</p>
+</li>
+<li>
+<p>修改成</p>
+<p>&lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;</p>
+<p>&lt;scope&gt;<font color="#dd0000">provided</font>&lt;/scope&gt;[<a href="http://pclevin.blogspot.com/2015/02/maven-dependency-scope.html">說明</a>]</p>
+</li>
+</ul>
+<p>完整 pom.xml :</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+	xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+		&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+		&lt;version&gt;2.5.2&lt;/version&gt;
+		&lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
+	&lt;/parent&gt;
+	&lt;groupId&gt;com.example&lt;/groupId&gt;
+	&lt;artifactId&gt;deployDemo&lt;/artifactId&gt;
+	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+	&lt;name&gt;deployDemo&lt;/name&gt;
+	&lt;description&gt;Demo project for Spring Boot&lt;/description&gt;
+	&lt;packaging&gt;war&lt;/packaging&gt;
+	&lt;properties&gt;
+		&lt;java.version&gt;11&lt;/java.version&gt;
+	&lt;/properties&gt;
+	&lt;dependencies&gt;
+		&lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+			&lt;scope&gt;test&lt;/scope&gt;
+		&lt;/dependency&gt;
+		
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+
+	&lt;build&gt;
+		&lt;plugins&gt;
+			&lt;plugin&gt;
+				&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+				&lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+			&lt;/plugin&gt;
+		&lt;/plugins&gt;
+	&lt;/build&gt;
+
+&lt;/project&gt;
+</code></pre><h4 id="3-打包warmaven-install產生war檔案">3. 打包.war，Maven install產生war檔案</h4>
+<p><img src="/images/mavenInstall.png" alt="mavenInstall">
+<img src="/images/target.png" alt="target"></p>
+<h4 id="4-佈署到apache-tomcat">4. 佈署到apache tomcat</h4>
+<ul>
+<li>
+<p>apache-tomcat-8.5.68\webapps 路徑下清空後貼入war檔案</p>
+</li>
+<li>
+<p>apache-tomcat-8.5.68\bin 執行批次檔startup.bat</p>
+</li>
+</ul>
+<p><img src="/images/runSrpingBoot.png" alt="runSrpingBoot"></p>
+<ul>
+<li>開啟瀏覽器</li>
+</ul>
+<p>http://localhost:8080/deployDemo-0.0.1-SNAPSHOT/index</p>
+<p>deployDemo-0.0.1-SNAPSHOT為war名，會在webapp自動解開</p>
+<hr>
+<p><a href="https://github.com/JackyLiu556/deployDemo">範例程式碼(GitHub)</a></p>
+<p><a href="https://ithelp.ithome.com.tw/articles/10197448">參考文章-1</a></p>
+<p><a href="https://iter01.com/202418.html">參考文章-2</a></p>
 
         </div>
+
+        
+        
       </div>
     </div>
   </div>
 </section>
-
-<section class="section-sm list-html pt-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <h4 class="widget-title">Skills</h4>
-        <div class="content">
-          <div class="skill-progress-bar">
-            <div class="row">
-              <div class="offset-md-3 col-md-6">
-                <div class="progress-title">Java</div>
-                <div class="progress">
-                  <div class="progress-bar skill-100"></div>
-                </div>
-              </div>
-              <div class="offset-md-3 col-md-6">
-                <div class="progress-title">Spring framework</div>
-                <div class="progress">
-                  <div class="progress-bar skill-90"></div>
-                </div>
-              </div>
-              <div class="offset-md-3 col-md-6">
-                <div class="progress-title">Struts2 framework</div>
-                <div class="progress">
-                  <div class="progress-bar skill-90"></div>
-                </div>
-              </div>
-              <div class="offset-md-3 col-md-6">
-                <div class="progress-title">Html, Css3, Javascript, JQuery</div>
-                <div class="progress">
-                  <div class="progress-bar skill-80"></div>
-                </div>
-              </div>
-              <div class="offset-md-3 col-md-6">
-                <div class="progress-title">Git</div>
-                <div class="progress">
-                  <div class="progress-bar skill-70"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-sm list-html pt-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <h4 class="widget-title">Tools</h4>
-        <div class="content">
-          <div class="skill-progress-bar">
-            <div class="row">
-              <div class="offset-md-3 col-md-6">
-                <div class="progress-title">Ecplise</div>
-                <div class="progress">
-                  <div class="progress-bar skill-100"></div>
-                </div>
-              </div>
-              <div class="offset-md-3 col-md-6">
-                <div class="progress-title">Vscode</div>
-                <div class="progress">
-                  <div class="progress-bar skill-100"></div>
-                </div>
-              </div>
-              <div class="offset-md-3 col-md-6">
-                <div class="progress-title">FineReport</div>
-                <div class="progress">
-                  <div class="progress-bar skill-60"></div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container-fluid px-0">
-    <div class="text-center">
-      <h4 class="widget-title">Achievement</h4>
-    </div>
-    <div class="row no-gutters" style="justify-content: center;">
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6" style="border: 1px solid;border-color: #E6E6FA;">   
-        <img class="img-fluid w-100" src="/images/bus.jpg" alt="">
-      </div>
-      <div class="progress-title mx-5">
-        <h4>東南遊覽車公司222 - ERP開發 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
-        <ul>
-          <li>協助公司作業E化</li>
-          <li>員工作業效率提升400%</li>
-          <li>主管能更即時的將業績數據化</li>
-        </ul>
-      </div>
-    </div>
-    <br>
-    <div class="row no-gutters" style="justify-content: center;">
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6" style="border: 1px solid;border-color: #E6E6FA;">   
-        <img class="img-fluid w-100" src="/images/tekcare.jpg" alt="">
-      </div>
-      <div class="progress-title mx-5">
-        <h4>捷修網 - 2014年度優異員工表揚</h4>
-        <ul>
-          <li>導入WTP優化流程</li>
-          <li>提升現場品質及效率100%</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<br><br><br>
-
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4FJ53"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  
 
 
 

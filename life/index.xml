@@ -1,50 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on Jacky&#39;s Blog</title>
+    <title>life on Jacky&#39;s Blog</title>
     <link>https://jackyliu556.github.io/life/</link>
-    <description>Recent content in blog on Jacky&#39;s Blog</description>
+    <description>Recent content in life on Jacky&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate><atom:link href="https://jackyliu556.github.io/life/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>### Spring Boot中使用Swagger2建構RESTful APIs</title>
-      <link>https://jackyliu556.github.io/life/post-4/</link>
-      <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>
+      <title>### NBA / 2021 finals 新面貌 / 太陽vs公鹿 !</title>
+      <link>https://jackyliu556.github.io/life/nba_20201_finals/</link>
+      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://jackyliu556.github.io/life/post-4/</guid>
-      <description>Swagger是什麼? Swagger 是一套 API 互動文件產生器，使用 HTML 與 Javascript 所編寫的一套 Open Source Software，支援了現在許多的 REST API，之所以會說這是一個互動的文件，除了顯示 API 輸出入規格外，也能夠讓使用者即時的在 Swagger UI 介面上對你的 Web API 進行測試，立刻就能看到執行結果。</description>
-    </item>
-    
-    <item>
-      <title>### Google Analytics (GA) 和 Google Tag Manager (GTM)</title>
-      <link>https://jackyliu556.github.io/life/post-3/</link>
-      <pubDate>Tue, 22 Jun 2021 10:07:47 +0600</pubDate>
-      
-      <guid>https://jackyliu556.github.io/life/post-3/</guid>
-      <description>GA是什麼? Google提供的 Google Analytics 是所有網站最基本必裝的網站分析工具，不論你在賣什麼商品或是服務，肯定要知道Google Analytics如何分析，也必須了解它該如何操作與解讀才能協助你的業績蒸蒸日上！GA除了可以幫你估算銷售量、轉換率，方便你瞭解使用者如何使用你的網站、他們是從什麼管道搜尋或是連結前來，你的網站內容是否吸引人、符合使用者所需等，有些甚至能以圖示呈現資料，讓你一眼就清楚抓出自己想要的數據結果。
-GA Analytics (分析)
-GA安裝教學</description>
-    </item>
-    
-    <item>
-      <title>### Markdown - 輕量級標記式語言</title>
-      <link>https://jackyliu556.github.io/life/post-2/</link>
-      <pubDate>Tue, 22 Jun 2021 10:07:47 +0600</pubDate>
-      
-      <guid>https://jackyliu556.github.io/life/post-2/</guid>
-      <description>Markdown是一種輕量級標記式語言，它能讓文件更容易閱讀、編寫。
-Markdown不是要來取代HTML，是一種編寫的格式，HTML 是一種發佈的格式。
-大部分情況下是用來撰寫程式語言相關的文檔，因為純文字的特性與程式碼一致，且可搭配標示符號來改變呈現格式，像是在 Github 的文件中使用 readme.md 的 Markdown 格式，則會預設作為該儲存庫的介紹。</description>
-    </item>
-    
-    <item>
-      <title>### 第一篇Blog測試</title>
-      <link>https://jackyliu556.github.io/life/post-1/</link>
-      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://jackyliu556.github.io/life/post-1/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6  Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+      <guid>https://jackyliu556.github.io/life/nba_20201_finals/</guid>
+      <description>太陽vs公鹿 萬眾矚目，兩支隊伍終於在東西區脫穎而出，雖然實力不俗，但卻不是外界預測的大熱門
+籃網(KD,KI,James Harden) 或 湖人(衛冕冠軍LBJ,AD)
+今年季後賽，成為史上明星傷病最多的[報導]，也是促成冠軍組合原因之一
+季後賽相關報導   史無前例的故事發展 太陽與CP3的驚奇之旅</description>
     </item>
     
   </channel>
