@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Swagger 是一套 API 互動文件產生器，使用 HTML 與 Javascript 所編寫">
+  <meta name="description" content="Putty 最多人用的 Telnet, SSH…伺服器連線工具...">
   <meta name="author" content="Jacky liu">
   <meta name="generator" content="Hugo 0.84.0" />
 
@@ -140,63 +140,44 @@
         
         <div class="mt-1" style="border-top: 3px solid #4169E1; height: 1rem;"></div>
         <div class="content mb-5">
-          <h3 id="swagger是什麼">Swagger是什麼?</h3>
-<p>Swagger 是一套 API 互動文件產生器，使用 HTML 與 Javascript 所編寫的一套 Open Source Software，支援了現在許多的 REST API，之所以會說這是一個互動的文件，除了顯示 API 輸出入規格外，也能夠讓使用者即時的在 Swagger UI 介面上對你的 Web API 進行測試，立刻就能看到執行結果。</p>
+          <p><img src="/images/Putty.png" alt="Putty"></p>
+<h3 id="putty是什麼">Putty是什麼?</h3>
+<p>PuTTY是一款整合虛擬終端、系統控制台和網路檔案傳輸為一體的自由及開放原始碼的程式。它支援多種網路協定，包括SCP，SSH，Telnet，rlogin和原始的通訊端連接。</p>
+<p>Mack大大也推薦另一款
+[<a href="https://mobaxterm.mobatek.net">MobaXterm</a>]</p>
 <hr>
-<h4 id="1-maven-pomxml-抓相關jar">1. Maven pom.xml 抓相關jar</h4>
-<pre><code>&lt;dependency&gt;
-  &lt;groupId&gt;io.springfox&lt;/groupId&gt;
-  &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
-  &lt;version&gt;2.7.0&lt;/version&gt;
-&lt;/dependency&gt;
-
-&lt;dependency&gt;
-  &lt;groupId&gt;io.springfox&lt;/groupId&gt;
-  &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;
-  &lt;version&gt;2.7.0&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre><h4 id="2-配置swagger-config檔案">2. 配置Swagger config檔案</h4>
-<pre><code>@Configuration
-@EnableSwagger2
-public class SwaggerConf {
-    @Bean
-    public Docket createRestApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                .select()
-                .apis(RequestHandlerSelectors.basePackage(&quot;com.kevin.controller&quot;))
-                .paths(PathSelectors.any())//paths(PathSelectors.regex(&quot;/.*&quot;))
-                .build();
-    }
-
-    private ApiInfo apiInfo() {
-        return new ApiInfoBuilder()
-                .title(&quot;標題:Spring Boot中使用Swagger2建構RESTful APIs&quot;)
-                .description(&quot;相關說明&quot;)
-                .termsOfServiceUrl(&quot;https://www.pixnet.net/pcard/B0212066/&quot;)
-                .license(&quot;Apache 2.0&quot;)
-                .licenseUrl(&quot;http://www.apache.org/licenses/LICENSE-2.0.html&quot;)
-                .version(&quot;1.0.0&quot;)
-                .build();
-    }
-}
-</code></pre><h4 id="3-在controller新增api並增加api說明">3. 在controller新增API，並增加API說明</h4>
-<pre><code>
-@Api(tags=&quot;UserController&quot;,description=&quot;類別檔案說明&quot;)
-@RestController
-public class UserController {
-	  @ApiOperation(value=&quot;My first api&quot;, notes=&quot;API說明文字&quot;)
-	  @PostMapping(&quot;/api/v1&quot;)
-	  public ResponseEntity hello(@RequestBody UserRequestDto dto){
-		  System.out.println(dto);
-	      return ResponseEntity.ok(&quot;Hello World&quot;);
-	  }
-}
-</code></pre><h4 id="3-輸入網址來測試-">3. 輸入網址來測試 :</h4>
-<pre><code>http://localhost:8080/swagger-ui.html
-</code></pre><p><img src="/images/Swagger.png" alt="Swagger"></p>
-<p><a href="https://github.com/JackyLiu556/swaggerDemo">範例程式碼(GitHub)</a></p>
-<p><a href="https://b0212066.pixnet.net/blog/post/215996424-swagger-2%E4%BD%BF%E7%94%A8%E7%AD%86%E8%A8%98">參考文章</a></p>
+<h4 id="1-安裝">1. 安裝</h4>
+<p>安裝及設定部分很簡單，上網搜尋便有很多
+[<a href="https://blog.xuite.net/brown168168/blog/20571618-PUTTY+%E5%85%A5%E9%96%80+%E6%95%99%E5%AD%B8">參考</a>]</p>
+<h4 id="2-配色方案">2. 配色方案</h4>
+<p>由於Putty原始配色很難看清楚，所以我改了配置
+[<a href="https://www.itread01.com/content/1549055174.html">配色方案</a>]</p>
+<p><img src="/images/Putty_1.png" alt="Putty"></p>
+<h4 id="3-操作putty及linux基本指令">3. 操作Putty及Linux基本指令</h4>
+<p>除了 cd + (url) 和 ls，ll 還記得外</p>
+<ol>
+<li>
+<p>pwd : 查看路徑</p>
+</li>
+<li>
+<p>less + fileName : 查看大文件和跟蹤log</p>
+<ul>
+<li>退出，「q」退出less</li>
+<li>文件的開頭，「g」鍵</li>
+<li>文件的末尾，「G」鍵。</li>
+<li>向下移動一頁，「Space」鍵「PgDn」鍵</li>
+<li>向上移動一頁，「b」鍵「PgUp」鍵</li>
+</ul>
+</li>
+<li>
+<p>less 搜尋特定字樣 / + 查詢字串</p>
+<ul>
+<li>上一個匹配的文本，「N」鍵</li>
+<li>下一個匹配的文本，「n」鍵</li>
+</ul>
+</li>
+</ol>
+<p><a href="https://kknews.cc/zh-tw/code/q9a928r.html">[參考網址]</a>]</p>
 
         </div>
 

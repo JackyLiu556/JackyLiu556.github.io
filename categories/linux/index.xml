@@ -13,7 +13,10 @@
       <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jackyliu556.github.io/blog/putty/</guid>
-      <description>Swagger是什麼? Swagger 是一套 API 互動文件產生器，使用 HTML 與 Javascript 所編寫的一套 Open Source Software，支援了現在許多的 REST API，之所以會說這是一個互動的文件，除了顯示 API 輸出入規格外，也能夠讓使用者即時的在 Swagger UI 介面上對你的 Web API 進行測試，立刻就能看到執行結果。</description>
+      <description>Putty是什麼? PuTTY是一款整合虛擬終端、系統控制台和網路檔案傳輸為一體的自由及開放原始碼的程式。它支援多種網路協定，包括SCP，SSH，Telnet，rlogin和原始的通訊端連接。
+Mack大大也推薦另一款 [MobaXterm]
+ 1. 安裝 安裝及設定部分很簡單，上網搜尋便有很多 [參考]
+2. 配色方案 由於Putty原始配色很難看清楚，所以我改了配置 [配色方案]</description>
     </item>
     
   </channel>
