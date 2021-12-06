@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="發現YT有大神幫我們Web補基礎 ...">
+  <meta name="description" content="紀錄一下個人網站如何佈版 ...">
   <meta name="author" content="Jacky liu">
   <meta name="generator" content="Hugo 0.84.0" />
 
@@ -122,14 +122,14 @@
     <div class="row">
       <div class="col-lg-10 mx-auto">  
         <div style="text-align: center;">
-          <h2><h3 id="成為看起來很強的後端-web實驗室">成為看起來很強的後端 (Web實驗室)</h3>
+          <h2><h3 id="hugo-佈版至-github">Hugo 佈版至 GitHub</h3>
 </h2>
         </div>     
         <div class="mb-3 post-meta" style="text-align: center;">
           <span>By Jacky liu</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>2021-12-05</span>
+          <span>0001-01-01</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
           
@@ -141,19 +141,29 @@
         <div class="mt-1" style="border-top: 3px solid #4169E1; height: 1rem;"></div>
         <div class="content mb-5">
           <h3 id="個人網站發佈簡易紀錄">個人網站發佈簡易紀錄?</h3>
-<p>Step1: clone gitHub 到local()</p>
-<h3 id="gtm是什麼">GTM是什麼?</h3>
-<p>Google 代碼管理工具（Google Tag Manager, 以下簡稱GTM） 是一套<strong>代碼管理系統</strong> (TMS)。在安裝完成後，網站分析師與行銷人員不用更改網站的程式碼，透過GTM即能輕易地將各種追蹤程式碼以及第三方應用工具安裝到網站中，讓追蹤和管理都在同一個平台完成。</p>
-<p>使用GTM 三大優點 :</p>
 <ul>
-<li>行銷人員友善，簡化置入流程</li>
-<li>提升網站速度</li>
-<li>減少網站追蹤出錯機會</li>
+<li>
+<p>clone gitHub (jackyliu556.github.io) 到本地端</p>
+</li>
+<li>
+<p>用Git做版控，工具用<strong>SourceTree</strong>，可用SSH公鑰，http方式2021/08已改成access token</p>
+</li>
+<li>
+<p>新增或修改content裡的md檔案</p>
+</li>
+<li>
+<p>cmd輸入<strong>hugo server</strong> 啟動Hugo伺服器</p>
+</li>
+<li>
+<p>檢視修改成果(Ex: http://localhost:1313/)</p>
+</li>
+<li>
+<p>cmd輸入<strong>hugo</strong>(前提已安裝Hugo)，產生相對靜態檔案(public)</p>
+</li>
+<li>
+<p>複製靜態檔(public)更新到git資料夾，並push至github</p>
+</li>
 </ul>
-<p>建議安裝Chrome外掛 <font color="#dd0000">Tag Assistant</font>  (by Google)，它可驗證你是否已在網頁上正確安裝了各種Google標籤</p>
-<p><img src="/images/GTM.png" alt="GTM 代碼管理工具)"></p>
-<p><a href="https://tagmanager.google.com/?authuser=1#/home">GTM 代碼管理工具</a></p>
-<p><a href="https://www.youtube.com/watch?v=-K4nV66piDY">使用GTM安裝GA基礎追蹤碼</a></p>
 
         </div>
 
