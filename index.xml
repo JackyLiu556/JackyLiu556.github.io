@@ -13,8 +13,8 @@
       <pubDate>Sun, 05 Dec 2021 15:17:47 +0600</pubDate>
       
       <guid>https://jackyliu556.github.io/blog/backend/</guid>
-      <description>個人網站發佈簡易紀錄? Step1: clone gitHub 到local()
-GTM是什麼? Google 代碼管理工具（Google Tag Manager, 以下簡稱GTM） 是一套代碼管理系統 (TMS)。在安裝完成後，網站分析師與行銷人員不用更改網站的程式碼，透過GTM即能輕易地將各種追蹤程式碼以及第三方應用工具安裝到網站中，讓追蹤和管理都在同一個平台完成。</description>
+      <description>YT Web實驗室 最近發現一個YT頻道(Web實驗室)，有一系列講解Web後端基礎，覺得很棒~!
+04. 網路是如何運作的－從瀏覽器到伺服器(YT教學) Browser &amp;gt; URL &amp;gt; wifi/LAN &amp;gt; Router &amp;gt; Proxy(做快取) &amp;gt; Routers(中華電信.</description>
     </item>
     
     <item>
@@ -119,7 +119,7 @@ Markdown不是要來取代HTML，是一種編寫的格式，HTML 是一種發佈
       <pubDate>Tue, 01 Jun 2021 15:17:47 +0600</pubDate>
       
       <guid>https://jackyliu556.github.io/blog/hugo/</guid>
-      <description>個人網站發佈簡易紀錄?   clone gitHub (jackyliu556.github.io) 到本地端
+      <description>個人網站發佈，簡易步驟   clone gitHub (jackyliu556.github.io) 到本地端
   用Git做版控，工具用SourceTree，可用SSH公鑰，http方式2021/08已改成access token</description>
     </item>
     
