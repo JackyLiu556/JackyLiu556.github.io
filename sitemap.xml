@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jackyliu556.github.io/life/nba_2022_warriors/</loc>
+    <lastmod>2021-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jackyliu556.github.io/</loc>
+    <lastmod>2021-12-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jackyliu556.github.io/blog/backend/</loc>
     <lastmod>2021-12-05T15:17:47+06:00</lastmod>
   </url><url>
     <loc>https://jackyliu556.github.io/categories/</loc>
-    <lastmod>2021-12-05T15:17:47+06:00</lastmod>
-  </url><url>
-    <loc>https://jackyliu556.github.io/</loc>
     <lastmod>2021-12-05T15:17:47+06:00</lastmod>
   </url><url>
     <loc>https://jackyliu556.github.io/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/</loc>
@@ -21,9 +24,6 @@
     <lastmod>2021-07-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jackyliu556.github.io/life/nba_2021_finals/</loc>
-    <lastmod>2021-07-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jackyliu556.github.io/life/nba_2022_warriors/</loc>
     <lastmod>2021-07-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jackyliu556.github.io/blog/springdatajpa/</loc>
