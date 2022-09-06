@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is meta description">
+  <meta name="description" content="Maven是在Spring開發中，負責Libary管理和Project構建的工具">
   <meta name="author" content="Jacky liu">
   <meta name="generator" content="Hugo 0.84.0" />
 
@@ -117,150 +117,58 @@
 </header>
 <!-- /navigation -->
 
-
-<section class="section-sm list-html">
+<section class="section-sm single-html">
   <div class="container">
     <div class="row">
-      
-      <div class="col-lg-4">
-  
-  <div class="widget">
-    
-    <h4 class="widget-title">About Me</h4>
-    
-    <img src="https://jackyliu556.github.io/images/author.jpg" alt=""
-      class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
-    
-    <p id="about-sidebar">我是劉立銓，中壢人，目前在 Mirror 擔任 Java Backend Developer，這裡是我紀錄和分享擔任碼農的學習心得。</p>
-    <a href="https://jackyliu556.github.io/about/" class="btn btn-outline-primary">Know More</a>
-    
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Category</h4>
-    <ul class="list-unstyled">
-      <li><a
-          href="/categories/java">Java</a>
-      </li>
-      <li><a
-          href="/categories/linux">Linux</a>
-      </li>
-      <li><a
-          href="/categories/spring-boot">Spring boot</a>
-      </li>
-      <li><a
-          href="/categories/%e5%ad%b8%e7%bf%92%e7%ad%86%e8%a8%98">學習筆記</a>
-      </li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Social</h4>
-    <ul class="list-inline social-links">
-      
-      <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100005005938684"><i class="ti-facebook"></i></a></li>
-      
-      <li class="list-inline-item"><a href="https://www.instagram.com/eddy07160/"><i class="ti-instagram"></i></a></li>
-      
-      <li class="list-inline-item"><a href="https://github.com/JackyLiu556"><i class="ti-github"></i></a></li>
-      
-      <li class="list-inline-item"><a href="https://www.linkedin.com/in/%E7%AB%8B%E9%8A%93-%E5%8A%89-942111211/"><i class="ti-linkedin"></i></a></li>
-      
-    </ul>
-  </div>
-</div>
+      <div class="col-lg-10 mx-auto">  
+        <div style="text-align: center;">
+          <h2><h3 id="maven-工具">Maven 工具</h3>
+</h2>
+        </div>     
+        <div class="mb-3 post-meta" style="text-align: center;">
+          <span>By Jacky liu</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>2022-09-06</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          
+          <a href="/categories/%e5%ad%b8%e7%bf%92%e7%ad%86%e8%a8%98"
+            class="text-primary">學習筆記</a>
+          
+        </div>
+        
+        <div class="mt-1" style="border-top: 3px solid #4169E1; height: 1rem;"></div>
+        <div class="content mb-5">
+          <p>Maven是在Spring開發中，負責<strong>Libary管理</strong>和<strong>Project構建</strong>的工具</p>
+<h3 id="libary管理">Libary管理</h3>
+<p><strong>用途</strong> : 管理Project可以使用那些功能</p>
+<p><strong>用法</strong> : 透過pom.xml檔案進行管理</p>
+<h3 id="scope">Scope</h3>
+<p>通常都預設值</p>
+<p>1、 <strong>compile  (編譯)</strong> : 此為預設值，表示此jar是所有階段需要的。 部署時將一起被打包到jar/war裡面。</p>
+<p>2、 <strong>test (測試)</strong> : 表示此jar檔只有在測試時，才需要使用。如 junit jar 等。 部署時將不會打包到jar/war裡面。</p>
+<p>3、 <strong>runtime (運行)</strong> : 表示此jar檔只有在運行編譯時，才需要使用。如jdbc jar等。</p>
+<p>4、 <strong>provided (已提供)</strong> : 當運行時，表示此jar檔期望由JDK、Tomcat及jboss等來提供。如 servlet.jar、jsp-api.jar 等。
+部署時將不會打包到jar/war裡面。</p>
+<p>5、 <strong>system (系統)</strong> : 表示此jar檔有系統提供。跟provided 相似，這是以外部JAR檔的形式提供。而在maven repository 是無法找到它的。
+需指定位置，配合 systemPath 來使用。</p>
+<h3 id="project-構建">Project 構建</h3>
+<p><strong>用途</strong> : 對Spring project 進行編譯、測試、運行、清理、打包</p>
+<p><strong>用法</strong> : 透過 maven 指令操作</p>
+<h3 id="maven-repository-maven倉庫">Maven Repository (Maven倉庫)</h3>
+<p><strong>用途</strong> : 儲存Spring project 依賴的 Library (jar檔)</p>
+<p>可以分為<strong>本地倉庫(Local Repository)<strong>和</strong>遠端倉庫(Remote Repository)</strong>，當Local倉庫找不到jar時，才會去Remote找並下載到Local</p>
+<p><img src="/images/maven.png" alt="Putty"></p>
 
-      
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="col-md-12 mb-4">
-    <article class="card">
-        <div class="card-body px-0">
-        <a href="https://jackyliu556.github.io/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" class="h5 d-block my-3">學習筆記</a>
-        <div class="mb-3 post-meta">
-            <span>By Jacky liu</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>0001-01-01</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            
         </div>
-        <p class="card-text"></p>
-        <a href="https://jackyliu556.github.io/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-          <div class="col-md-12 mb-4">
-    <article class="card">
-        <div class="card-body px-0">
-        <a href="https://jackyliu556.github.io/categories/spring-boot/" class="h5 d-block my-3">Spring Boot</a>
-        <div class="mb-3 post-meta">
-            <span>By Jacky liu</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>0001-01-01</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            
-        </div>
-        <p class="card-text"></p>
-        <a href="https://jackyliu556.github.io/categories/spring-boot/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-          <div class="col-md-12 mb-4">
-    <article class="card">
-        <div class="card-body px-0">
-        <a href="https://jackyliu556.github.io/categories/linux/" class="h5 d-block my-3">Linux</a>
-        <div class="mb-3 post-meta">
-            <span>By Jacky liu</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>0001-01-01</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            
-        </div>
-        <p class="card-text"></p>
-        <a href="https://jackyliu556.github.io/categories/linux/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-          <div class="col-md-12 mb-4">
-    <article class="card">
-        <div class="card-body px-0">
-        <a href="https://jackyliu556.github.io/categories/java/" class="h5 d-block my-3">Java</a>
-        <div class="mb-3 post-meta">
-            <span>By Jacky liu</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>0001-01-01</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            
-        </div>
-        <p class="card-text"></p>
-        <a href="https://jackyliu556.github.io/categories/java/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-        </div>
-      </div>
-      
-      <div class="col-12 mt-5">
+
+        
         
       </div>
     </div>
   </div>
 </section>
-
 
 
 

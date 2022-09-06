@@ -6,7 +6,19 @@
     <description>Recent content in 學習筆記 on Jacky&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 05 Dec 2021 15:17:47 +0600</lastBuildDate><atom:link href="https://jackyliu556.github.io/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Sep 2022 10:07:47 +0600</lastBuildDate><atom:link href="https://jackyliu556.github.io/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>### Maven 工具</title>
+      <link>https://jackyliu556.github.io/blog/maven/</link>
+      <pubDate>Tue, 06 Sep 2022 10:07:47 +0600</pubDate>
+      
+      <guid>https://jackyliu556.github.io/blog/maven/</guid>
+      <description>Maven是在Spring開發中，負責Libary管理和Project構建的工具
+Libary管理 用途 : 管理Project可以使用那些功能
+用法 : 透過pom.xml檔案進行管理
+Scope 通常都預設值</description>
+    </item>
+    
     <item>
       <title>### 成為看起來很強的後端 (Web實驗室)</title>
       <link>https://jackyliu556.github.io/blog/backend/</link>
